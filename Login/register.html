@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Login/styles.css/stylereg.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>Registro</header>
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title"></span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nombres</label>
+                            <input type="text" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Apellidos</label>
+                            <input type="text" placeholder="Ingrese sus apellidos" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Teléfono</label>
+                            <input type="number" placeholder="Ingrese el número de Teléfono" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Dirección</label>
+                            <input type="text" placeholder="Ingrese su dirección" required>
+                        </div>
+                        <div class="input-field">
+                            <label>País</label>
+                            <input type="text" placeholder="Ingrese su país" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Ciudad</label>
+                            <input type="text" placeholder="Ingrese su ciudad" required>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="details ID">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Documento</label>
+                            <select required>
+                                <option disabled selected>Tipo de documento</option>
+                                <option>CC</option>
+                                <option>CE</option>
+                                <option>PB</option>
+                                <option>RC</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Correo</label>
+                            <input type="email" placeholder="Ingrese su correo" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Constraseña</label>
+                            <input type="password" placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Número de documento</label>
+                            <input type="number" placeholder="Ingrese número de documento" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Confirme su correo</label>
+                            <input type="email" placeholder="Confirme su correo" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Confirme su contraseña</label>
+                            <input type="password" placeholder="confirme su contraseña" required>
+                        </div>
+                    </div>
+                    <button class="btnfix">
+                        <span class="btnText">Enviar</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                </div>
+        </form>
+    </div>
+
+    <script src="/Login/scripts/scriptreg.js"></script>
+</body>
+</html>

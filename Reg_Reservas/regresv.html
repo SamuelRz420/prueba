@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Reg_Reservas/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/Dashboard/img/Logo_alone.png" alt="">
+                    <h2>Jo<span class="danger">nia</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html" class="active">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">manage_accounts</span>
+                    <h3>Roles</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">groups</span>
+                    <h3>Usuarios</h3>
+                </a>
+
+                <a href="../Habitaciones/index.html">
+                    <span class="material-symbols-outlined">bedroom_parent</span>
+                    <select id="habitaciones" class="habitaciones">
+                        <option value="0">Habitaciones</option>
+                        <option value="1">Ver Habitaciones</option>
+                        <option value="2">Tipo de Habitacion</option>
+                    </select>
+                </a>
+
+                <script>
+                    document.getElementById('habitaciones').addEventListener('change', function () {
+                        var seleccion = this.value;
+                        if (seleccion === '1') {
+                            window.location.href = '/Habitaciones/index.html';
+                        } else if (seleccion === '2') {
+                            window.location.href = '/Tipo_Habitaciones/index.html';
+                        }
+                    });
+                </script>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">linked_services</span>
+                    <h3>Servicios</h3>
+                </a>
+
+                <a href="../Paquetes/index.html">
+                    <span class="material-symbols-outlined">package_2</span>
+                    <h3>Paquetes</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">face</span>
+                    <h3>Clientes</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">edit_calendar</span>
+                    <h3>Reservas</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">night_shelter</span>
+                    <h3>Hospedaje</h3>
+                </a>
+
+                <a href="/Login/index.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+    </div>
+            <div class="container2">
+                <header class="tit">Datos del Cliente</header>
+                    <form action="#">
+                        <div class="resv1">
+                            <div class="details-personal">
+                                <span class="title"></span>
+                                    <div class="fields">
+                                        <div class="input-field1">
+                                        <label>Nombres</label>
+                                        <input type="text" placeholder="Ingrese su nombre" required>
+                                        </div>
+                                        <br>
+                                        <div class="input-field1">
+                                        <label>Apellidos</label>
+                                        <input type="text" placeholder="Ingrese sus apellidos" required>
+                                        </div>
+                                        <br>
+                                        <div class="input-field1">
+                                        <label>Direccion</label>
+                                        <input type="number" placeholder="Ingrese su direccion" required>
+                                        </div>
+                                        <br>
+                                        <div class="input-field1">
+                                        <label>CC</label>
+                                        <input type="text" placeholder="Ingrese su documento" required>
+                                        </div>
+                                        <br>
+                                        <div class="input-field1">
+                                        <label>Correo</label>
+                                        <input type="email" placeholder="Ingrese su correo" required>
+                                        </div>
+                                        <br>
+                                        <div class="input-field1">
+                                        <label>Telefono</label>
+                                        <input type="text" placeholder="Ingrese su Telefono" required>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    <div class="datsresv0">
+                        <header class="tit2">Datos generales de la reserva</header>
+                        <div class="datsresv">
+                            <form action="#">
+                                <div class="datsresv1">
+                                    <div class="datsresv2">
+                                        <label>Nro.Reserva</label>
+                                        <input type="text" placeholder="Numero de reserva" required>
+                                    </div>
+                                    <br>
+                                    <div class="datsresv2">
+                                        <label>Fecha de Reserva</label>
+                                        <input type="text" placeholder="sysdate" required>
+                                    </div>
+                                    <br>
+                                    <div class="datsresv2">
+                                        <label>Inicio</label>
+                                        <input type="date" placeholder="Fecha de ida" required>
+                                    </div>
+                                    <br>
+                                    <div class="datsresv2">
+                                        <label>Fin</label>
+                                        <input type="date" placeholder="Fecha de vuelta " required>
+                                    </div>
+                                    <br>
+                                    <div class="datt">
+                                        <div class="datsresv3" id="dat">
+                                            <label>Valor Total</label>
+                                            <input type="text" placeholder="Numero de reserva" required>
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="datsresv3" id="dat">
+                                            <label>Anticipo Pagado</label>
+                                            <input type="text" placeholder="Numero de reserva" required>
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="datsresv3" id="dat">
+                                            <label>Completacion de Pago</label>
+                                            <input type="text" placeholder="Numero de reserva" required>
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="datsresv3" id="dat">
+                                            <label>Estado</label>
+                                            <input type="text" placeholder="Numero de reserva" required>
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="datsresv3" id="dat">
+                                            <input type="date" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="paqts">
+                        <header class="tit5">Paquetes</header>
+                            <div class="paqts1">
+                                <form action="#">
+                                    <div class="paqts2">
+                                        <div class="paqq">
+                                            <div class="paqts3">
+                                            <Label>Nombre</Label>
+                                            <input type="text" placeholder="Nombre">
+                                            </div>
+                                            <br>
+                                            <div class="paqts3">
+                                            <Label>Descripcion</Label>
+                                            <input type="text" placeholder="Nombre">
+                                            </div>
+                                            <br>
+                                            <div class="paqts3">
+                                            <Label>Nro. Paquete</Label>
+                                            <input id="pq" type="text" placeholder="2">
+                                            </div>
+                                            <br>
+                                        </div>                                        
+                                        <div class="paq">
+                                            <div class="paqts4">
+                                                <Label>IdPaquete</Label>
+                                                <input type="text" placeholder="Nombre">
+                                            </div>
+                                            <br>
+                                            <div class="paqts4">
+                                                <Label>Precio</Label>
+                                                <input type="text" placeholder="Nombre">
+                                            </div>
+                                            <br>
+                                            <div class="paqts4">
+                                                <Label>Total</Label>
+                                                <input type="text" placeholder="Nombre">
+                                            </div>
+                                            <br>
+                                        </div>                                  
+                                        <div class="tabla">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tipo Habitacion</th>
+                                                        <th>Nro.Habitacion</th>
+                                                        <th>Nro.Personas</th>
+                                                        <th>Habitaciones</th>
+                                                        <th>Operaciones</th>                    
+                                                    </tr>
+                                                    <br>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Triple</td>
+                                                        <td>3</td>
+                                                        <td>6</td>
+                                                        <td>301 - 302 - 303</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <br>
+                                                    <tr>
+                                                        <td>Doble</td>
+                                                        <td>2</td>
+                                                        <td>4</td>
+                                                        <td>504 - 506</td>
+                                                        <td></td>                    
+                                                    </tr>
+                        
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <br>
+                        <div class="resvv">
+                            <header class="tit4">Detalle de la reserva</header>
+                                <div class="resvv1">
+                                    <div class="tabla2">
+                                        <h1 class="tit3">Paquetes Reservados</h1>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>IdPaquete</th>
+                                                    <th>Nombre</th>
+                                                    <th>Descripcion</th>
+                                                    <th>Precio Paquete</th>
+                                                    <th>Cantidad</th>
+                                                    <th>Personas</th>
+                                                    <th>Sub-Total</th>
+                                                    <th>Operaciones</th>                    
+                                                </tr>
+                                                <br>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2034</td>
+                                                    <td>Vamos en Familia</td>
+                                                    <td>Familiar para 10</td>
+                                                    <td>$ 1.000.000</td>
+                                                    <td>2</td>
+                                                    <td>20</td>
+                                                    <td>$ 2.000.000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <br>
+                                                <tr>
+                                                    <td>2036</td>
+                                                    <td>Sencillo</td>
+                                                    <td>Para 1 Persona</td>
+                                                    <td>$ 200.000</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>$ 200.000</td>
+                                                    <td></td>                   
+                                                </tr>
+                    
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                        <h1 class="tit3">Hospedaje</h1>
+                                        <div class="tabla3">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                    <th>Tipo Habitacion</th>
+                                                    <th>Nro. Habitacion</th>
+                                                    <th>Nro. Persona</th>
+                                                    <th>Habitaciones</th>                   
+                                                    </tr>
+                                                </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Cuadruple</td>
+                                                    <td>4</td>
+                                                    <td>16</td>
+                                                    <td>301 - 302 - 603 - 604</td>
+                                                </tr>
+                                                <br>
+                                                <tr>
+                                                    <td>Doble</td>
+                                                    <td>2</td>
+                                                    <td>4</td>
+                                                    <td>504 - 506</td>                  
+                                                </tr>
+                                                <br>
+                                                <tr>
+                                                    <td>Simple</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>108</td>                  
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                      </div>
+                                </div>
+                        </div>
+                    </div>
+                       
+                </div>
+
+</body>
+
+</html>

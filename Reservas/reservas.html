@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Reservas/reservas.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/Dashboard/img/Logo_alone.png" alt="">
+                    <h2>Jo<span class="danger">nia</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html" class="active">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">manage_accounts</span>
+                    <h3>Roles</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">groups</span>
+                    <h3>Usuarios</h3>
+                </a>
+
+                <a href="../Habitaciones/index.html">
+                    <span class="material-symbols-outlined">bedroom_parent</span>
+                    <select id="habitaciones" class="habitaciones">
+                        <option value="0">Habitaciones</option>
+                        <option value="1">Ver Habitaciones</option>
+                        <option value="2">Tipo de Habitacion</option>
+                    </select>
+                </a>
+
+                <script>
+                    document.getElementById('habitaciones').addEventListener('change', function () {
+                        var seleccion = this.value;
+                        if (seleccion === '1') {
+                            window.location.href = '/Habitaciones/index.html';
+                        } else if (seleccion === '2') {
+                            window.location.href = '/Tipo_Habitaciones/index.html';
+                        }
+                    });
+                </script>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">linked_services</span>
+                    <h3>Servicios</h3>
+                </a>
+
+                <a href="../Paquetes/index.html">
+                    <span class="material-symbols-outlined">package_2</span>
+                    <h3>Paquetes</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">face</span>
+                    <h3>Clientes</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">edit_calendar</span>
+                    <h3>Reservas</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">night_shelter</span>
+                    <h3>Hospedaje</h3>
+                </a>
+
+                <a href="/Login/index.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <div class="container2">
+            <main>
+
+                <h1 class="resv1">Reservasiones</h1>
+
+                <input type="search" placeholder="Busca tu reservas" id="Buscador" />
+
+                <div class="plus_container">
+                    <a href=""><span class="material-symbols-outlined">add_circle</span></a>
+                    <h2>Nueva Resevasion</h2>
+                </div>
+
+                <div class="recent-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>IdReserva</th>
+                                <th>Cliente</th>
+                                <th>Tipo Dic</th>
+                                <th>Documento</th>
+                                <th>Fecha Reserva</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Final</th>
+                                <th>Nro Personas</th>
+                                <th>Total</th>
+                                <th>Anticipos</th>
+                                <th>Estado</th>
+                                <th>Operaciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Antonio</td>
+                                <td>Cedula</td>
+                                <td>4568721</td>
+                                <td>14/11/2023</td>
+                                <td>15/12/2023</td>
+                                <td>30/12/2023</td>
+                                <td>2</td>
+                                <td>$ 2.500.000</td>
+                                <td>$ 0</td>
+                                <td class="resv">Reservado</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>002</td>
+                                <td>Salomon</td>
+                                <td>PEP</td>
+                                <td>256876</td>
+                                <td>01/11/2023</td>
+                                <td>27/11/2023</td>
+                                <td>05/12/2023</td>
+                                <td>1</td>
+                                <td>$ 1.200.000</td>
+                                <td>$ 100.000</td>
+                                <td class="pent">Pendiente</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>003</td>
+                                <td>Miranda</td>
+                                <td>Cedula</td>
+                                <td>38565411</td>
+                                <td>03/11/2023</td>
+                                <td>01/01/2024</td>
+                                <td>10/01/2024</td>
+                                <td>3</td>
+                                <td>$ 4.500.000</td>
+                                <td>$ 1.000.000</td>
+                                <td class="pent">Pendiente</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>004</td>
+                                <td>Rosa</td>
+                                <td>Cedula</td>
+                                <td>17646799</td>
+                                <td>10/11/2023</td>
+                                <td>15/01/2024</td>
+                                <td>22/01/2024</td>
+                                <td>2</td>
+                                <td>$ 2.500.000</td>
+                                <td>$ 0</td>
+                                <td class="canc">Cancelado</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>005</td>
+                                <td>Ramon</td>
+                                <td>PEP</td>
+                                <td>684333</td>
+                                <td>05/11/2023</td>
+                                <td>25/12/2023</td>
+                                <td>30/12/2023</td>
+                                <td>1</td>
+                                <td>$ 1.600.000</td>
+                                <td>$ 0</td>
+                                <td class="resv">Reservado</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <a href="#" class="show_all">Mostrar todos</a>
+            </main>
+
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Feeder4000</b></p>
+                            <small text-muted>Admin</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="/Dashboard/img/photo-profile.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+</body>
+
+</html>

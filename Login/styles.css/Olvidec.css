@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+body {
+    background-image: url("/Login/img/background_login.jpg");
+    backdrop-filter: blur(0.4rem);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 110vh;
+    margin: -3vh;
+    padding: 10vh;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+
+
+.OlvideC {
+    background-color: #4ea93b;
+    align-content: center;
+    margin-top: -2%;
+    display: flex;
+    transform: translateX(1%);
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 450px;
+
+
+
+
+}
+
+.OlvideC1 {
+
+    align-content: center;
+    margin-top: 2%;
+    width: 120vh;
+    height: 65vh;
+    background-color: white;
+
+
+
+}
+
+.Olvi2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.OlvideC2 {
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 5%;
+
+
+
+}
+
+.Olvi1 {
+    text-align: center;
+
+}
+
+
+.OlvideC4 {
+    text-align: center;
+
+
+}
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 10px 10px;
+    margin: 8px 0;
+    width: 70%;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid whitesmoke;
+    background-color: #333;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.Olvi3 {
+    width: 100px;
+    height: 100px;
+
+
+}

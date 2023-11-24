@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar paquete</title>
+    <link rel="stylesheet"
+     rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles/style2.css">
+    
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="../Dashboard/img/Logo_alone.png" alt="">
+                    <h2>Jo<span class="danger">nia</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard/index.html">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">manage_accounts</span>
+                    <h3>Roles</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">groups</span>
+                    <h3>Usuarios</h3>
+                </a>
+
+                <a href="../Habitaciones/index.html">
+                    <span class="material-symbols-outlined">bedroom_parent</span>
+                    <select id="habitaciones" class="habitaciones">
+                        <option value="0">Habitaciones</option>
+                        <option value="1">Ver Habitaciones</option>
+                        <option value="2">Tipo de Habitacion</option>
+                    </select>
+                </a>
+
+                <script>
+                    document.getElementById('habitaciones').addEventListener('change', function () {
+                        var seleccion = this.value;
+                        if (seleccion === '1') {
+                            window.location.href = '/Habitaciones/index.html';
+                        } else if (seleccion === '2') {
+                            window.location.href = '/Tipo_Habitaciones/index.html';
+                        }
+                    });
+                </script>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">linked_services</span>
+                    <h3>Servicios</h3>
+                </a>
+
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">package_2</span>
+                    <h3>Paquetes</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">face</span>
+                    <h3>Clientes</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">edit_calendar</span>
+                    <h3>Reservas</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">night_shelter</span>
+                    <h3>Hospedaje</h3>
+                </a>
+
+                <a href="/Login/index.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+
+            <div class="container1">
+                <form action="#">
+                    <div class="fields">
+                        <div class="input-field">
+                            <div class="colmns">
+                                <label>Nombre del paquete: </label> 
+                            </div>
+                            <div class="colmns">
+                                <input type="text" placeholder="" >
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <div class="colmns">
+                                <label>Descripción: </label>
+                            </div>
+                            <div class="colmns">
+                                <textarea type="text" class="descriptioninp"></textarea>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <div class="colmns">
+                                <label>Estado: </label>
+                            </div>
+                            <div class="colmns">
+                                <select required>
+                                    <option disabled selected>Seleccionar</option>
+                                    <option>Habilitado</option>
+                                    <option>No Habilitado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container2">
+                <form action="#">
+                    <div class="fields">
+                        <div class="input-field">
+                            <div class="colmns">
+                                <label>Personas: </label>
+                            </div>
+                            <div class="colmns">
+                                <input type="number" class="Numper">
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <div class="colmns">
+                                <a href="#"><span class="material-symbols-outlined">
+                                    add_photo_alternate
+                                    </span></a>
+                            </div>
+                            <div class="colmns">
+                                <img src="img/eka-glamping-san-francisco-cundinamarca.jpg" alt="" style="height: 100px; width: 100px; margin-left: 80px; margin-top: 20px;">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="plus_container2">
+                <h2>Registro de paquete</h2>
+                <form action="#">
+                         <div class="fields">
+                             <div class="input-field">
+                                <div class="colmns">
+                                    <label>Total del paquete: </label> 
+                                </div>
+                                <div class="colmns">
+                                    <input type="number" placeholder="$" >
+                                </div>
+                            </div>
+                            <div class="input-field" >
+                                <div class="colmns">
+                                    <label >Descuento: </label>
+                                </div>
+                                <div class="colmns">
+                                    <input type="number" placeholder="%">
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <div class="colmns" id="PrecioFinalLab">
+                                    <label>Precio de Venta del Paquete: </label>
+                                </div>
+                                <div class="colmns">
+                                    <input type="text" id="PrecioFinal"  placeholder="$">
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+            <div class="container3">
+                <h1>Habitaciones: </h1>
+            
+            <form action="#">
+                <div class="fields">
+                    <div class="input-field">
+                        <div class="colmns">
+                            <Label>Tipo Habitación: </Label> 
+                        </div>
+                        <div class="colmns">
+                            <select>
+                                <option value="Doble" id ="tipoh">Doble</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="colmns">
+                            <label>Precio: </label>
+                        </div>
+                        <div class="colmns">
+                            <input type="number" placeholder="$">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="colmns">
+                            <label>Cantidad: </label>
+                        </div>
+                        <div class="colmns">
+                            <input type="number" id="cant">
+                        </div>
+                        <div class="colmns">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+
+            <div class="container4">
+                <h1>Hospedaje: </h1>
+                <div class="recent-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo Habitación</th>
+                                <th>Nro. Habitaciones</th>
+                                <th>Precio</th>
+                                <th>Sub-Total</th>
+                                <th>Operaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cuádruple</td>
+                                <td>1</td>
+                                <td>400000$</td>
+                                <td>800000$</td>
+                                <td>
+                                    <a href="Editar_Paquete.html"><span class="material-symbols-outlined">delete</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Doble</td>
+                                <td>2</td>
+                                <td>200000$</td>
+                                <td>200000$</td>
+                                <td>
+                                    <a href="Editar_Paquete.html"><span class="material-symbols-outlined">delete</span></a>
+                                </td>
+                            </tr>
+    
+                        </tbody>
+                    </table>
+                   <div class="optcontainer">
+                    <form action="">
+                    <div class="fields">
+                        <div class="input-field" id="Total1">   
+                            <div class="colmns" >
+                                <label for="">Total Hospedaje: </label>
+                            </div>
+                            <div class="colmns">
+                                <input type="number" placeholder="$">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>    
+                </div>
+            </div>
+
+            <div class="container5">
+                <h1>Servicio: </h1>
+            
+            <form action="#">
+                <div class="fields">
+                    <div class="input-field">
+                        <div class="colmns">
+                            <Label>Servicio: </Label> 
+                        </div>
+                        <div class="colmns">
+                            <select>
+                                <option id ="tipoh">Cabalgata</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="colmns">
+                            <label>Precio: </label>
+                        </div>
+                        <div class="colmns">
+                            <input type="number" placeholder="$">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div class="colmns">
+                            <label>Cantidad: </label>
+                        </div>
+                        <div class="colmns">
+                            <input type="number" id="cant">
+                        </div>
+                        <div class="colmns">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+
+
+            <div class="container6">
+                <h1>Servicios: </h1>
+                <div class="recent-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tipo de Servicio</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Sub-Total</th>
+                                <th>Operaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Desayuno</td>
+                                <td>Alimentación</td>
+                                <td>10000$</td>
+                                <td>10</td>
+                                <td>100000$</td>
+                                <td>
+                                    <a href="Editar_Paquete.html"><span class="material-symbols-outlined">delete</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Spa</td>
+                                <td>Salud</td>
+                                <td>40000$</td>
+                                <td>2</td>
+                                <td>80000$</td>
+                                <td>
+                                    <a href="Editar_Paquete.html"><span class="material-symbols-outlined">delete</span></a>
+                                </td>
+                            </tr>
+    
+                        </tbody>
+                    </table>
+                   <div class="optcontainer2">
+                    <form action="">
+                    <div class="fields">
+                        <div class="input-field" id="Total2">   
+                            <div class="colmns" >
+                                <label for="">Total Servicios: </label>
+                            </div>
+                            <div class="colmns">
+                                <input type="number" name="180000" placeholder="$">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>    
+                </div>
+            </div>
+           
+        </main>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Feeder4000</b></p>
+                        <small text-muted>Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/Dashboard/img/photo-profile.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+
+</body>
+</html>
